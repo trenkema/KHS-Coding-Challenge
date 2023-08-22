@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using FMOD.Studio;
 
 public enum FireMode
 {
@@ -37,7 +38,8 @@ public class Gun : MonoBehaviour, IInteractable
     private float currentTimeBetweenFiring = 0.5f;
     private bool holdingTrigger = false;
     public float fireCooldownTimer = 0f;
-
+    private FMOD.Studio.EventInstance GunShotSound;
+    private FMOD.Studio.EventInstance ReloadSound;
     private void OnEnable()
     {
         EventSystemNew<int, WeaponType>.Subscribe(Event_Type.RELOAD_WEAPON, ReloadWeapon);
@@ -168,6 +170,10 @@ public class Gun : MonoBehaviour, IInteractable
         ammoCountText.text = currentAmmoCount.ToString();
 
         Instantiate(ammoPrefab, firePosition.position, firePosition.rotation).GetComponent<Rigidbody>().AddForce(firePosition.forward * firePower);
+
+        GunShotSound = FMODUnity.RuntimeManager.CreateInstance("event:/shot");
+        GunShotSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        GunShotSound.start();
     }
 
     /// <summary>
@@ -182,6 +188,10 @@ public class Gun : MonoBehaviour, IInteractable
             currentAmmoCount = _ammoAmount;
             ammoCountText.text = currentAmmoCount.ToString();
             fireCooldownTimer = 0f;
+
+        ReloadSound = FMODUnity.RuntimeManager.CreateInstance("event:/Reload");
+        ReloadSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        ReloadSound.start();
         }
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using FMOD.Studio;
 public class Lever : MonoBehaviour
 {
     [SerializeField] private Rigidbody rb;
@@ -13,6 +13,8 @@ public class Lever : MonoBehaviour
     private bool isSelected = false;
     private bool hasReachedLimit = false;
 
+    private FMOD.Studio.EventInstance LeverSoundOn;
+    private FMOD.Studio.EventInstance LeverSoundMove;
     /// <summary>
     /// Check for the angle of hinge when this lever is selected.
     /// </summary>
@@ -36,11 +38,21 @@ public class Lever : MonoBehaviour
             {
                 hasReachedLimit = true;
                 onMinLimit?.Invoke();
+
+
             }
             else if (hinge.angle >= hinge.limits.max)
             {
                 hasReachedLimit = true;
                 onMaxLimit?.Invoke();
+
+                LeverSoundMove.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                LeverSoundMove.release();
+                
+                LeverSoundOn = FMODUnity.RuntimeManager.CreateInstance("event:/Lever_On");
+                LeverSoundOn.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+                LeverSoundOn.start();
+
             }
         }
         else
@@ -48,6 +60,13 @@ public class Lever : MonoBehaviour
             if (hinge.angle != hinge.limits.min || hinge.angle != hinge.limits.max)
             {
                 hasReachedLimit = false;
+
+                LeverSoundOn.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                LeverSoundOn.release();
+
+                LeverSoundMove = FMODUnity.RuntimeManager.CreateInstance("event:/Lever_Move");
+                LeverSoundMove.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+                LeverSoundMove.start();
             }
         }
     }
@@ -59,6 +78,10 @@ public class Lever : MonoBehaviour
     {
         isSelected = true;
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
+
+                LeverSoundMove = FMODUnity.RuntimeManager.CreateInstance("event:/Lever_Move");
+                LeverSoundMove.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+                LeverSoundMove.start();
     }
 
     /// <summary>
@@ -68,5 +91,8 @@ public class Lever : MonoBehaviour
     {
         isSelected = false;
         rb.constraints = RigidbodyConstraints.FreezeAll;
+
+        LeverSoundMove.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        LeverSoundMove.release();
     }
 }

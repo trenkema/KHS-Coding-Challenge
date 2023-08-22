@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 6335771241502832596}
   - component: {fileID: 6335771241502832599}
   - component: {fileID: 825722624}
+  - component: {fileID: 964816277470875031}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -355,14 +356,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 646a10abbf1af1d4bbbc2c5e41b8520a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadTime: 1
-  deadTimeActive: 0
   onPressed:
     m_PersistentCalls:
       m_Calls: []
   onReleased:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &964816277470875031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335771241502832593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Button
+  EventReference:
+    Guid:
+      Data1: 1692304440
+      Data2: 1221295904
+      Data3: 1507523475
+      Data4: -15351145
+    Path: event:/Button_On
+  Event: 
+  PlayEvent: 3
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0.1
+  OverrideMaxDistance: 7.8
 --- !u!1 &6335771242142232808
 GameObject:
   m_ObjectHideFlags: 0

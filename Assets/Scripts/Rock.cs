@@ -8,7 +8,7 @@ public class Rock : MonoBehaviour, IInteractable
     [SerializeField] private float force = 15f;
     [SerializeField] private XRGrabInteractable xrGrabInteractable;
     [SerializeField] private Rigidbody rb;
-
+    private FMOD.Studio.EventInstance RockHit;
     /// <summary>
     /// Start the coroutine to add force to the stone.
     /// </summary>

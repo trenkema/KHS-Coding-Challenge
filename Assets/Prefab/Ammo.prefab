@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4858899275388524793}
   - component: {fileID: 1793884036123126123}
   - component: {fileID: 7780715417134437413}
+  - component: {fileID: 223568370523176753}
   m_Layer: 0
   m_Name: Ammo
   m_TagString: Untagged
@@ -114,3 +115,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &223568370523176753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5229039901523491410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 706020830
+      Data2: 1208053466
+      Data3: -1632342082
+      Data4: 2010947958
+    Path: event:/Bullet_Sound
+  Event: 
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 3
+  OverrideMaxDistance: 15

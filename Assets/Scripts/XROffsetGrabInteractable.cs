@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using FMOD.Studio;
 
 public class XROffsetGrabInteractable : XRGrabInteractable
 {
@@ -9,6 +10,8 @@ public class XROffsetGrabInteractable : XRGrabInteractable
     /// Create an attachTransform if not existing yet.
     /// Make it a parent of this object and set the transform to it.
     /// </summary>
+    /// 
+    private FMOD.Studio.EventInstance HatSound;
     private void Start()
     {
         if (!attachTransform)
@@ -16,6 +19,10 @@ public class XROffsetGrabInteractable : XRGrabInteractable
             GameObject attachPoint = new GameObject("Offset Grab Pivot");
             attachPoint.transform.SetParent(transform, false);
             attachTransform = attachPoint.transform;
+
+          //HatSound = FMODUnity.RuntimeManager.CreateInstance("event:/Hat_Put_On");
+          //HatSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+          //HatSound.start();
         }
     }
 

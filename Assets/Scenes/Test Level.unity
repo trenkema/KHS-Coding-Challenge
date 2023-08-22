@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -134,6 +134,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7961242548127217132, guid: 14b2ac79b19326e4183fb30e114e0183,
     type: 3}
   m_PrefabInstance: {fileID: 1185399458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &86051598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 70645471750951846, guid: 47c8ff2e240547d4cb07352e281efc37,
+    type: 3}
+  m_PrefabInstance: {fileID: 70645471100985891}
   m_PrefabAsset: {fileID: 0}
 --- !u!136 &92535173 stripped
 CapsuleCollider:
@@ -920,6 +926,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 70645471100985891}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &692220297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86051598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1079869867
+      Data2: 1284161092
+      Data3: -942980714
+      Data4: -1312165120
+    Path: event:/Hat _Put_On
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 7.2000003
 --- !u!136 &694160816 stripped
 CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 8265716493314538413, guid: 3c99d0ba506360a43b8cea08ef805d25,
@@ -3435,6 +3471,25 @@ CapsuleCollider:
     type: 3}
   m_PrefabInstance: {fileID: 1691623929}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1575280141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 400054631729753194, guid: 26411079e06e4b2439312993a26dfe6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 400054631571337855}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1575280143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575280141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!136 &1616328859 stripped
 CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 7637844091522546301, guid: 77459436eeb3aeb48871d657bcb5fd7f,
@@ -3745,6 +3800,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1675497146 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 400054630674459980, guid: 26411079e06e4b2439312993a26dfe6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 400054631571337855}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1689682471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7961242548127217133, guid: 14b2ac79b19326e4183fb30e114e0183,
@@ -4795,12 +4856,42 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 400054631571337855}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1675497146}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0cb9aa70a22847b5925ee5f067c10a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1972821815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675497146}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -418109209
+      Data2: 1149344783
+      Data3: 280045707
+      Data4: 1420390421
+    Path: event:/Shot
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!65 &2031514735 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 7961242547152471448, guid: 14b2ac79b19326e4183fb30e114e0183,
@@ -5166,7 +5257,8 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1673151318}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 26411079e06e4b2439312993a26dfe6d, type: 3}
 --- !u!1001 &999763337242358885
 PrefabInstance:
@@ -5482,6 +5574,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1796956818}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: PlayEvent
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: CollisionTag
+      value: MainCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OverrideMaxDistance
+      value: 7.2000003
+      objectReference: {fileID: 0}
     - target: {fileID: 2930398532642687972, guid: f3d8572dc09914a4f9ef1dbc9c3ac1be,
         type: 3}
       propertyPath: m_InteractionManager
@@ -5705,6 +5809,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1796956818}
     m_Modifications:
+    - target: {fileID: 3008801143047140599, guid: 448dc101dabbc404f9eae1391741a998,
+        type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3008801143047140599, guid: 448dc101dabbc404f9eae1391741a998,
+        type: 3}
+      propertyPath: OverrideMinDistance
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4621433466218584692, guid: 448dc101dabbc404f9eae1391741a998,
         type: 3}
       propertyPath: m_Layer

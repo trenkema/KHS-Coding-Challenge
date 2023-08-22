@@ -334,6 +334,7 @@ GameObject:
   - component: {fileID: 7961242548127217123}
   - component: {fileID: 7961242548127217120}
   - component: {fileID: 4762753488306368747}
+  - component: {fileID: -2542928980059869762}
   m_Layer: 9
   m_Name: Rock
   m_TagString: Untagged
@@ -393,7 +394,6 @@ MonoBehaviour:
   force: 70000
   xrGrabInteractable: {fileID: 4762753488306368747}
   rb: {fileID: 7961242548127217123}
-  direction: {fileID: 1503197420112425585}
 --- !u!114 &4762753488306368747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,6 +524,36 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &-2542928980059869762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7961242548127217132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 399210308
+      Data2: 1198488357
+      Data3: 556224931
+      Data4: -1982692450
+    Path: event:/Rock_Hit
+  Event: 
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 5.2000003
+  OverrideMaxDistance: 90
 --- !u!1 &7961242548399638409
 GameObject:
   m_ObjectHideFlags: 0

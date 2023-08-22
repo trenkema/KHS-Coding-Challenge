@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: 4621433466959409985}
   - component: {fileID: 4621433466959409986}
   - component: {fileID: 4621433466959409987}
+  - component: {fileID: 3008801143047140599}
   m_Layer: 9
   m_Name: Gun
   m_TagString: Untagged
@@ -522,6 +523,37 @@ MonoBehaviour:
   ammoPrefab: {fileID: 5229039901523491410, guid: 2720655819a000f41839a24e6742d870,
     type: 3}
   firePosition: {fileID: 4621433467391364038}
+  fireCooldownTimer: 0
+--- !u!114 &3008801143047140599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4621433466959409997}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -418109209
+      Data2: 1149344783
+      Data3: 280045707
+      Data4: 1420390421
+    Path: event:/Shot
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0.2
+  OverrideMaxDistance: 5
 --- !u!1 &4621433467170347971
 GameObject:
   m_ObjectHideFlags: 0
