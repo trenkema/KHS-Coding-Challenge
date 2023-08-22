@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 3077358700808821327}
   - component: {fileID: 3077358700808821326}
   - component: {fileID: 3077358700808821325}
+  - component: {fileID: 8964866908720653376}
   m_Layer: 9
   m_Name: Door
   m_TagString: Untagged
@@ -312,6 +313,36 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &8964866908720653376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3077358700808821360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1333283828
+      Data2: 1252178386
+      Data3: 733392308
+      Data4: 33737284
+    Path: event:/Door Open
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0.1
+  OverrideMaxDistance: 6
 --- !u!1 &3077358701116049522
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +646,7 @@ GameObject:
   - component: {fileID: 3077358702001229256}
   - component: {fileID: 3077358702001229263}
   - component: {fileID: 3077358702001229262}
+  - component: {fileID: 5158704767520385796}
   m_Layer: 9
   m_Name: Door Handle
   m_TagString: Untagged
@@ -695,11 +727,41 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3077358702001229260}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5158704767520385796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3077358702001229260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1333283828
+      Data2: 1252178386
+      Data3: 733392308
+      Data4: 33737284
+    Path: event:/Door Open
+  Event: 
+  PlayEvent: 3
+  StopEvent: 4
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0.1
+  OverrideMaxDistance: 6
 --- !u!1 &3077358702121604924
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: ../../Game Design/FPS Assignment - Aug '23/FPSaudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638283247248486309
+  lastModified: 638283274925480656
   FileSizes:
   - Name: Desktop
     Value: 1628
@@ -89,7 +89,7 @@ MonoBehaviour:
   Path: ../../Game Design/FPS Assignment - Aug '23/FPSaudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638283247248451305
+  lastModified: 638283274925440649
   FileSizes:
   - Name: Desktop
     Value: 2167744
@@ -243,7 +243,7 @@ MonoBehaviour:
   - {fileID: -4479297875754706845}
   StringsBanks:
   - {fileID: -8351415049064569202}
-  cacheTime: 638283247248486309
+  cacheTime: 638283274925480656
   cacheVersion: 131601
 --- !u!114 &1016208065059794142
 MonoBehaviour:
@@ -404,9 +404,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 414
+  MinDistance: 0.1
+  MaxDistance: 6
+  Length: 320
 --- !u!114 &6277691311826429709
 MonoBehaviour:
   m_ObjectHideFlags: 0
