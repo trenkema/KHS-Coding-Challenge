@@ -47,6 +47,9 @@ public class Flashlight : MonoBehaviour, IInteractable
     public void TriggerStarted()
     {
     }
-
+    void Update()
+    {
+        FlashSoundActive.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+    }
 
 }

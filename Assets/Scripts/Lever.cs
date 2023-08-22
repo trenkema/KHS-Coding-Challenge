@@ -14,6 +14,7 @@ public class Lever : MonoBehaviour
     private bool hasReachedLimit = false;
 
     private FMOD.Studio.EventInstance LeverSoundOn;
+    private FMOD.Studio.EventInstance LeverSoundOff;
     private FMOD.Studio.EventInstance LeverSoundMove;
     /// <summary>
     /// Check for the angle of hinge when this lever is selected.
@@ -23,6 +24,8 @@ public class Lever : MonoBehaviour
         if (isSelected)
         {
             CheckAngle();
+            CheckAngleAudio();
+            DisableAngleAudio();
         }
     }
 
@@ -48,10 +51,8 @@ public class Lever : MonoBehaviour
 
                 LeverSoundMove.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
                 LeverSoundMove.release();
-                
-                LeverSoundOn = FMODUnity.RuntimeManager.CreateInstance("event:/Lever_On");
-                LeverSoundOn.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-                LeverSoundOn.start();
+
+
 
             }
         }
@@ -61,15 +62,66 @@ public class Lever : MonoBehaviour
             {
                 hasReachedLimit = false;
 
+                //LeverSoundOn.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                //LeverSoundOn.release();
                 LeverSoundOn.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
                 LeverSoundOn.release();
-
                 LeverSoundMove = FMODUnity.RuntimeManager.CreateInstance("event:/Lever_Move");
                 LeverSoundMove.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
                 LeverSoundMove.start();
             }
         }
     }
+
+    private void CheckAngleAudio()
+        {
+            if (hinge.angle > 80)
+            {
+                
+                LeverSoundMove.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                LeverSoundMove.release();
+
+                Debug.Log("The lever is ON");
+
+                
+            }
+                if (hinge.angle < -80)
+                    {
+
+                    LeverSoundMove.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                    LeverSoundMove.release();
+
+                    LeverSoundOn.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                    LeverSoundOn.release();
+
+                    LeverSoundOff = FMODUnity.RuntimeManager.CreateInstance("event:/Lever_Off");
+                    LeverSoundOff.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+                    LeverSoundOff.start();
+                    Debug.Log("The lever is OFF");
+
+                    }
+            if (hasReachedLimit = true)
+            {
+                LeverSoundOn = FMODUnity.RuntimeManager.CreateInstance("event:/Lever_On");
+                LeverSoundOn.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+                LeverSoundOn.start();
+            }
+            if (hasReachedLimit = false)
+            {
+                    LeverSoundOn.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                    LeverSoundOn.release();
+            }
+
+            
+        }
+    private void DisableAngleAudio()
+                {
+                if (hinge.angle < 79)
+                {
+                    LeverSoundOn.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                    LeverSoundOn.release();
+                }
+                }
 
     /// <summary>
     /// Only freeze the X and Y rotation when selecting the lever.
@@ -95,4 +147,5 @@ public class Lever : MonoBehaviour
         LeverSoundMove.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         LeverSoundMove.release();
     }
+
 }

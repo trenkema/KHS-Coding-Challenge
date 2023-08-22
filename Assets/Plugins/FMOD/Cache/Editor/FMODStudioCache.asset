@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../../Game Design/FPS Assignment - Aug '23/FPSaudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638283274925480656
+  lastModified: 638283450815620835
   FileSizes:
   - Name: Desktop
-    Value: 1628
+    Value: 1722
   Exists: 1
 --- !u!114 &-8306091395497879369
 MonoBehaviour:
@@ -47,6 +47,60 @@ MonoBehaviour:
   MinDistance: 0.1
   MaxDistance: 7.8
   Length: 1732
+--- !u!114 &-8162593518145017385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience
+  Guid:
+    Data1: 2047526280
+    Data2: 1140024222
+    Data3: 645872301
+    Data4: -1933126343
+  Banks:
+  - {fileID: -4479297875754706845}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0.2
+  MaxDistance: 25
+  Length: 169463
+--- !u!114 &-7624628949186867671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Door_Hit
+  m_EditorClassIdentifier: 
+  Path: event:/Door_Hit
+  Guid:
+    Data1: 849186440
+    Data2: 1160515486
+    Data3: 1809919618
+    Data4: 426801956
+  Banks:
+  - {fileID: -4479297875754706845}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0.1
+  MaxDistance: 4.8
+  Length: 1384
 --- !u!114 &-5484015075296199031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,10 +143,10 @@ MonoBehaviour:
   Path: ../../Game Design/FPS Assignment - Aug '23/FPSaudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638283274925440649
+  lastModified: 638283450815575828
   FileSizes:
   - Name: Desktop
-    Value: 2167744
+    Value: 4529152
   Exists: 1
 --- !u!114 &-3418786014778199087
 MonoBehaviour:
@@ -238,12 +292,14 @@ MonoBehaviour:
   - {fileID: 6336098863695886982}
   - {fileID: -3418786014778199087}
   - {fileID: 3938271705749458791}
+  - {fileID: -7624628949186867671}
+  - {fileID: -8162593518145017385}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4479297875754706845}
   StringsBanks:
   - {fileID: -8351415049064569202}
-  cacheTime: 638283274925480656
+  cacheTime: 638283450815620835
   cacheVersion: 131601
 --- !u!114 &1016208065059794142
 MonoBehaviour:
@@ -350,7 +406,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 0.3
+  MinDistance: 0.2
   MaxDistance: 6.4
   Length: 11084
 --- !u!114 &3938271705749458791
@@ -405,8 +461,8 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 0.1
-  MaxDistance: 6
-  Length: 320
+  MaxDistance: 4.4
+  Length: 1550
 --- !u!114 &6277691311826429709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,9 +487,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1226
+  MinDistance: 0.2
+  MaxDistance: 4
+  Length: 1163
 --- !u!114 &6336098863695886982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,8 +514,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0.2
+  MaxDistance: 7
   Length: 2834
 --- !u!114 &7037558185847044247
 MonoBehaviour:
@@ -539,9 +595,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0.2
   MaxDistance: 7.2000003
-  Length: 436
+  Length: 1363
 --- !u!114 &8491698661141756580
 MonoBehaviour:
   m_ObjectHideFlags: 0
